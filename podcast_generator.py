@@ -148,7 +148,13 @@ for line in answer.split('\n'):
     text = text.strip()
     list1.append({'speaker': speaker, 'text': text})
     script_text += f"{speaker}: {text}\n"
-
+speaker=0
+for items in list1:
+    if speaker<=6 and speaker >=0:
+        if items.get("speaker").lower()=="host" or items.get("speaker").lower()=="guest" :
+            speaker+=1
+    else:
+        raise IndexError("Speaker limit exceeded")
 
 
 with open(args.output_script_file,"w",encoding="UTF-8") as f:
