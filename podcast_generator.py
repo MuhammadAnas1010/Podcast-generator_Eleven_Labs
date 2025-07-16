@@ -129,7 +129,9 @@ def combine_audio_files(audio_file_names, output_file):
     except Exception as e:
         print(f"Failed to combine audio files: {e}")
 args=CLI_parse()
-    
+
+#Todo: Add more voices later
+#change 1 2 3 
 text=[{'role':'system','content':'Your are given a topic of a podcast, you simplely have to return 6 answer 3 from host and 3 from guest,Not even a singlr more answer. the format should be like HOST: and Guest: , Nothing else,First line from Host like he is asking then from guset then again from host and then guest and so on. What you complete a reply from host or guest , write | this sign and then next .Make sure the conversation sounds like a natural conversation .Only write amm if you want but dont write any expression like laugh or confuse. these convertions are gonna be load into another voice generating LLM so make them sound as natural as possible '},{'role':'user','content':args.topic}]
 answer=model_response(text)
 
