@@ -21,7 +21,7 @@ This is a **CLI tool to generate a podcast** featuring a Host and a Guest discus
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/podcast-generator-cli.git
+git clone https://github.com/MuhammadAnas1010/Podcast-generator_Eleven_Labs.git
 cd podcast-generator-cli
 python -m venv venv
 venv\Scripts\activate
