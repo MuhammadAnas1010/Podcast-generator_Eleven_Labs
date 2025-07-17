@@ -31,5 +31,21 @@ pip install -r requirements.txt
 Eleven_lab_api_key=your_elevenlabs_api_key
 LLM_secret_key=your_groq_api_key
 
-python podcast_generator.py -topic "The Future of Artificial Intelligence"
+Launch the API server with: uvicorn main_api:app --reload
+
+server will be at: http://127.0.0.1:8000
+
+api docs: http://127.0.0.1:8000/docs
+
+Example api request Using /Docs:
+{
+    "topic": "The future of electric cars",
+    "llm_model": "llama3-70b-8192",
+    "llm_provider": "Groq",
+    "host_voice": "Xb7hH8MSUJpSbSDYk0k2",
+    "guest_voice": "cgSgspJ2msm6clMCkdW9",
+    "output_audio_filename": "my_podcast.mp3",
+    "output_script_filename": "my_podcast_script.txt"
+}
+
 ```
